@@ -731,15 +731,19 @@ body {
     height: 500px;
 }
 .reels .reels-container .slider {
-    left: 0px;
+    width: 77%;
+    left: 50%;
+    transform: translateX(-50%);
     transition: 0.5s;
 }
 .reels iframe {
-    width: 300px;
-    margin: 0 20px;
+    width: 100%;
+    margin: 0 10px;
 }
-.reels iframe:first-child {
-    margin: 0 20px 0 10px;
+@media (max-width: 575px) {
+    .reels .reels-container .slider {
+        width: 100%;
+    }
 }
 /* end reels */
 /* start reels */

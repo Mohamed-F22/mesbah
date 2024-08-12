@@ -225,36 +225,44 @@ if (project !== null) {
         behavior: 'smooth'
     });
 }
-// slider
+// reels slider
+let reelsSrc = [
+    "https://www.youtube.com/embed/tq919y-4Q-I",
+    "https://www.youtube.com/embed/cqak0XTvrCQ",
+    "https://www.youtube.com/embed/jKf4mKYU6Dk",
+    "https://www.youtube.com/embed/iOpHzGuqTWQ",
+    "https://www.youtube.com/embed/HeO8I9KRjaE",
+    "https://www.youtube.com/embed/97fnSRYdJ6A",
+    "https://www.youtube.com/embed/JTgp7iJL38E"
+]
 
 let leftIcon = document.querySelector(".reels .container .icon-left")
 let rightIcon = document.querySelector(".reels .container .icon-right")
-let slider = document.querySelector(".reels .reels-container .slider")
-let reels = document.querySelectorAll(".reels .reels-container .slider iframe")
+let reels = document.querySelector(".reels .reels-container .slider iframe")
 
-rightIcon.onclick = function () {
-    let computedStyle = window.getComputedStyle(slider);
-
-    let slidingLeft = computedStyle.getPropertyValue("left");
-    let slidingLeftValue = parseInt(slidingLeft)
-
-    if (slidingLeftValue > -((reels.length * 340) - 350)) {
-        slider.style.left = `${slidingLeftValue - 340}px`
+if (reels !== null) {
+    let i = 0
+    reels.setAttribute("src", `${reelsSrc[i]}`)
+    rightIcon.onclick = function () {
+        if (i === (reelsSrc.length - 1)) {
+            i = 0
+            reels.setAttribute("src", `${reelsSrc[i]}`)
+        }else {
+            i = i + 1
+            reels.setAttribute("src", `${reelsSrc[i]}`)
+        }
+    }
+    leftIcon.onclick = function () {
+        if (i === 0) {
+            i = (reelsSrc.length - 1)
+            reels.setAttribute("src", `${reelsSrc[i]}`)
+        }else {
+            i = i - 1
+            reels.setAttribute("src", `${reelsSrc[i]}`)
+        }
     }
 }
-leftIcon.onclick = function () {
-    let computedStyle = window.getComputedStyle(slider);
-    let slidingLeft = computedStyle.getPropertyValue("left");
-    let slidingLeftValue = parseInt(slidingLeft)
-
-    if (slidingLeftValue < 0) {
-        slider.style.left = `${slidingLeftValue + 340}px`
-    }
-}
-
 // chroma slider
-
-
 let reelsChromaSrc = [
     "https://www.youtube.com/embed/exMdzs1XDNw",
     "https://www.youtube.com/embed/ktAm94ZEXyE",
@@ -264,18 +272,15 @@ let reelsChromaSrc = [
     "https://www.youtube.com/embed/EMhH3ci6mzE"
 ]
 
-
-
 let leftIconCh = document.querySelector(".reels-chroma .container .icon-left")
 let rightIconCh = document.querySelector(".reels-chroma .container .icon-right")
 let reelsCh = document.querySelector(".reels-chroma .reels-container .slider iframe")
-
 
 if (reelsCh !== null) {
     let i = 0
     reelsCh.setAttribute("src", `${reelsChromaSrc[i]}`)
     rightIconCh.onclick = function () {
-        if (i === 5) {
+        if (i === (reelsChromaSrc.length - 1)) {
             i = 0
             reelsCh.setAttribute("src", `${reelsChromaSrc[i]}`)
         }else {
@@ -285,7 +290,7 @@ if (reelsCh !== null) {
     }
     leftIconCh.onclick = function () {
         if (i === 0) {
-            i = 5
+            i = (reelsChromaSrc.length - 1)
             reelsCh.setAttribute("src", `${reelsChromaSrc[i]}`)
         }else {
             i = i - 1
