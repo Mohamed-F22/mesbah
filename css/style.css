@@ -733,7 +733,6 @@ body {
 .reels .reels-container .slider {
     left: 0px;
     transition: 0.5s;
-    /* right: 0px; */
 }
 .reels iframe {
     width: 300px;
@@ -741,5 +740,31 @@ body {
 }
 .reels iframe:first-child {
     margin: 0 20px 0 10px;
+}
+/* end reels */
+/* start reels */
+.reels-chroma svg {
+    cursor: pointer;
+}
+.reels-chroma .reels-container {
+    flex: 1;
+    overflow: hidden;
+    background-color: var(--section-color);
+    height: 500px;
+}
+.reels-chroma .reels-container .slider {
+    width: 77%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+.reels-chroma iframe {
+    width: 100%;
+    margin: 0 10px;
+}
+@media (max-width: 575px) {
+    .reels-chroma .reels-container .slider {
+        width: 100%;
+    }
 }
 /* end reels */
