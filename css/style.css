@@ -436,7 +436,7 @@ body {
     padding-bottom: 80px;
 }
 .skills-section img {
-    width: 350px;
+    width: 400px;
 }
 .skills-section .frist-p {
     color: var(--main-color);
@@ -772,3 +772,21 @@ body {
     }
 }
 /* end reels */
+/* start white class */
+.class iframe {
+    width: 77%;
+    height: 500px;
+}
+@media (max-width: 768px) {
+    .class iframe {
+        height: 289px;
+        width: 100%;
+    }
+}
+@media (max-width: 575px) {
+    .class iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+/* end white class */
