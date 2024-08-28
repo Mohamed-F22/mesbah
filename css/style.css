@@ -14,6 +14,7 @@ body {
     border: none;
     padding: 0.5rem 1rem;
     font-weight: bold;
+    border-radius: 3px;
 }
 .second-btn {
     background-color: transparent;
@@ -215,6 +216,26 @@ body {
 .portfolio {
     background-color: var(--section-color);
 }
+@media (min-width: 1199px){
+    .Home-port .container {
+    width: 75%;
+    }
+}
+/* @media (max-width: 1199px){
+    .Home-port .container {
+    width: 65%;
+    }
+} */
+/* @media (max-width: 991px){
+    .Home-port .container {
+        width: 80%;
+    }
+} */
+@media (max-width: 768px){
+    .Home-port .container .optional {
+        display: none;
+    }
+}
 .portfolio .box {
     overflow: hidden;
 }
@@ -222,16 +243,43 @@ body {
     width: 100%;
     transition: 0.6s;
 }
+.portfolio .box .image::before ,
+.portfolio .box .image::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 2px;
+    background-color: var(--main-color);
+    transition: 0.7s;
+} 
+.portfolio .box .image::before {
+    top: 0;
+    left: 0;
+}
+.portfolio .box .image::after {
+    bottom: 0;
+    right: 0;
+}
 .portfolio .hover {
     width: 100%;
     position: absolute;
     top: 50%;
     left: -50%;
     transform: translate(-50%, -50%);
-    transition: 0.3s;
+    transition: 0.5s;
+}
+@media (max-width: 768px) {
+    .portfolio .hover .main-btn {
+        padding: 0.1rem 0.3rem;
+        font-size: 14px;
+    }
 }
 .portfolio .box:hover .hover {
     left: 50%;
+}
+.portfolio .box:hover .image::after, 
+.portfolio .box:hover .image::before {
+    height: 100%;
 }
 /* end portofolio */
 /* start intro */
