@@ -235,15 +235,95 @@ data = {
             "type": "reel"
         },
         {
-            "title": "Life Development",
-            "source": "https://www.youtube.com/embed/zsOxgUHQHHw",
-            "type": "reel"
+            "title" : "Digital Marketing",
+            "source" : "https://www.youtube.com/embed/3p9icSBXSjo",
+            "type" : "reel"
         },
         {
             "title" : "Digital Marketing",
             "source" : "https://www.youtube-nocookie.com/embed/Jirt79II19Y?si=T1ARbhWhcPtQAKMZ",
             "type" : "reel"
-        }
+        },
+        {
+            "title": "Life Development",
+            "source": "https://www.youtube.com/embed/zsOxgUHQHHw",
+            "type": "reel"
+        },
+        {
+            "title": "Saif Boyka",
+            "source": "https://www.youtube-nocookie.com/embed/GNxATNds4jo?si=807o0Na1pGMONums",
+            "type": "nvideo"
+        },
+        {
+            "title": "Boxing",
+            "source": "https://www.youtube-nocookie.com/embed/QhLbHM_QJzg?si=b3EuK2yRggtzaiou",
+            "type": "nvideo"
+        },
+        {
+            "title": "Taekwondo",
+            "source": "https://www.youtube-nocookie.com/embed/Ms8uThjGMoI?si=uQdIAq9reD0dcIWU",
+            "type": "nvideo"
+        },
+        {
+            "title": "Speech Therapy",
+            "source": "https://www.youtube-nocookie.com/embed/cqak0XTvrCQ?si=voNK-RiLtu2mWROm",
+            "type": "reel"
+        },
+        {
+            "title": "Brilliant Academy",
+            "source": "https://www.youtube-nocookie.com/embed/zoQ3eI0MUVU?si=E7OztITSrdV4pjT5",
+            "type": "nvideo"
+        },
+        {
+            "title": "Universe",
+            "source": "https://www.youtube-nocookie.com/embed/V4rljWMaZzM?si=XpyqxBksJbUCIclN",
+            "type": "nvideo"
+        },
+        {
+            "title": "EGYPTIAN Civilization",
+            "source": "https://www.youtube-nocookie.com/embed/qlH02k-VZMc?si=kyOwVXpTTIOBdgls",
+            "type": "nvideo"
+        },
+        {
+            "title": "EGYPTIAN Civilization Montage",
+            "source": "https://www.youtube.com/embed/XApkpf87KiA",
+            "type": "reel"
+        },
+        {
+            "title": "Mr Ahmed",
+            "source": "https://www.youtube-nocookie.com/embed/97fnSRYdJ6A?si=dYcCGxz2d-snKgyB&amp",
+            "type": "reel"
+        },
+        {
+            "title": "Mrs Rania",
+            "source": "https://www.youtube-nocookie.com/embed/YrRkju7sDKA?si=RdLMKKsPXV8pPBkg",
+            "type": "nvideo"
+        },
+        {
+            "title": "Mrs Amany",
+            "source": "https://www.youtube-nocookie.com/embed/HeO8I9KRjaE?si=pQosxx7ecPaQVD9F",
+            "type": "reel"
+        },
+        {
+            "title": "Conference",
+            "source": "https://www.youtube-nocookie.com/embed/sX6Fg0em9J0?si=0DjeM1TGnJ-qL3MG",
+            "type": "nvideo"
+        },
+        {
+            "title": "Hourse",
+            "source": "https://www.youtube-nocookie.com/embed/5dUrbZHruTM?si=tToWF9cMYHwsflwb",
+            "type": "nvideo"
+        },
+        {
+            "title": "Mohamed Kamal",
+            "source": "https://www.youtube-nocookie.com/embed/Iofp8jMbvRw?si=-YXU3QlGKn32CIcI",
+            "type": "nvideo"
+        },
+        {
+            "title": "Community",
+            "source": "https://www.youtube-nocookie.com/embed/sGYcmFLPD88?si=yR6-OPshdtCrjffw",
+            "type": "nvideo"
+        },
     ]
 }
 // project present
@@ -338,7 +418,8 @@ if (reelsCh !== null) {
 // project present type 2
 
 let popupInfo = data.popupInfo
-let portbtns = document.querySelectorAll(".portfolio .main-projects .box .hover .main-btn")
+console.log (popupInfo.length)
+let portbtns = document.querySelectorAll(".portfolio .hover .main-btn")
 
 portbtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -374,5 +455,13 @@ document.addEventListener("click", function (e) {
     if (e.target.classList.contains("fa-circle-xmark")) {
         e.target.parentNode.remove()
         document.querySelector(".popup-overlay").remove()
+    }
+})
+document.addEventListener("click", function (e) {
+    if (document.querySelector(".popup-box") !== null) {
+        if (e.target === document.querySelector(".popup-overlay")) {
+            document.querySelector(".popup-box").remove()
+            document.querySelector(".popup-overlay").remove()
+        }
     }
 })

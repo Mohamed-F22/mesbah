@@ -719,12 +719,18 @@ body {
 }
 .contact-us-and-social svg {
     color: var(--main-color);
+    font-size: 25px;
+}
+@media (max-width: 575px) {
+    .contact-us-and-social h3,
+    .contact-us-and-social svg {
+        font-size: 15px;
+    }
 }
 .contact-us-and-social span {
     color: var(--main-color);
     font-weight: 100;
 }
-
 .contact-us-and-social h1 {
     color:  var(--main-color);
 }
@@ -951,8 +957,8 @@ body {
 .popup-box svg {
     font-size: 35px;
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: 3px;
+    right: 3px;
     cursor: pointer;
     color: #fff;
     background-color: var(--main-color);
