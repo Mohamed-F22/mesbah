@@ -56,6 +56,9 @@ body {
     top: 0;
     z-index: 1;
 }
+.Tajawal-font {
+    font-family: "Tajawal", sans-serif;
+}
 /* start navbar */
 .navbar {
     background-color: var(--gray-opacity);
@@ -233,23 +236,6 @@ body {
     width: 100%;
     transition: 0.6s;
 }
-.portfolio .box .image::before ,
-.portfolio .box .image::after {
-    content: '';
-    position: absolute;
-    height: 0;
-    width: 2px;
-    background-color: var(--main-color);
-    transition: 0.7s;
-} 
-.portfolio .box .image::before {
-    top: 0;
-    left: 0;
-}
-.portfolio .box .image::after {
-    bottom: 0;
-    right: 0;
-}
 .portfolio .hover {
     width: 100%;
     position: absolute;
@@ -266,6 +252,23 @@ body {
 }
 .portfolio .box:hover .hover {
     left: 50%;
+}
+.portfolio .box .image::before ,
+.portfolio .box .image::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 2px;
+    background-color: var(--main-color);
+    transition: 0.7s;
+} 
+.portfolio .box .image::before {
+    top: 0;
+    left: 0;
+}
+.portfolio .box .image::after {
+    bottom: 0;
+    right: 0;
 }
 .portfolio .box:hover .image::after, 
 .portfolio .box:hover .image::before {
@@ -899,10 +902,11 @@ body {
     color: var(--main-color);
 }
 .pricing .price-card h5 {
-    font-weight: 100;
+    font-weight: bold;
 }
 .pricing .price-card h5 span {
     color: var(--main-color);
+    font-weight: 400;
 }
 .pricing .price-card svg {
     color: var(--main-color);
