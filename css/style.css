@@ -953,27 +953,28 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    /* padding: 20px;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; */
     z-index: 1001;
 }
 .popup-box svg {
     font-size: 35px;
     position: absolute;
-    top: 3px;
-    right: 3px;
+    top: 35px;
+    right: -19px;
     cursor: pointer;
-    color: #fff;
-    background-color: var(--main-color);
+    color: black;
+    background-color: white;
     border-radius: 50%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 .popup-box h3 {
     font-weight: bold;
     text-align: center;
     margin: 0 0 20px;
     color: var(--main--color);
+    color: white;
 }
 .popup-box iframe.reel {
     height: 550px;

@@ -160,6 +160,7 @@ let reelsSrc = data.reelsSrcInfo
 let leftIcon = document.querySelector(".reels .container .icon-left")
 let rightIcon = document.querySelector(".reels .container .icon-right")
 let reels = document.querySelector(".reels .reels-container .slider iframe")
+
 if (reels !== null) {
     let i = 0
     reels.setAttribute("src", `${reelsSrc[i]}`)
@@ -213,22 +214,29 @@ if (reelsCh !== null) {
 // project present type 2
 let popupInfo = data.popupInfo
 let portbtns = document.querySelectorAll(".portfolio .hover .main-btn")
+
 portbtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
         let overlay = document.createElement("div")
         overlay.className = "popup-overlay"
         document.body.appendChild(overlay)
+        
         let popupBox = document.createElement("div")
         popupBox.className = "popup-box"
+        
         let videoIndex = +btn.getAttribute("i") -1
         popupBox.classList.add(popupInfo[videoIndex].type)
+        
         let popupHead = document.createElement("h3")
         let popupHeadTxt = document.createTextNode(popupInfo[videoIndex].title)
+        
         popupHead.appendChild(popupHeadTxt)
         popupBox.appendChild(popupHead)
+        
         let closeIcon = document.createElement("i")
         closeIcon.className = "fa-regular fa-circle-xmark"
         popupBox.appendChild(closeIcon)
+        
         let popupVideo = document.createElement("iframe")
         popupVideo.setAttribute("src", popupInfo[videoIndex].source)
         popupVideo.className = popupInfo[videoIndex].type
