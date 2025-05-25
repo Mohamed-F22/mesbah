@@ -59,8 +59,8 @@ data = {
             "type": "nvideo"
         },
         {
-            "title": "Queens",
-            "source": "https://www.youtube.com/embed/rAPJWmfmc1M",
+            "title": "دكتور جامعي",
+            "source": "https://www.youtube.com/embed/dOO9AS__y0s",
             "type": "reel"
         },
         {
@@ -69,8 +69,8 @@ data = {
             "type" : "reel"
         },
         {
-            "title" : "Digital Marketing",
-            "source" : "https://www.youtube-nocookie.com/embed/Jirt79II19Y?si=T1ARbhWhcPtQAKMZ",
+            "title" : "Dentist",
+            "source" : "https://www.youtube.com/embed/bK98_8ThsKQ",
             "type" : "reel"
         },
         {
@@ -89,13 +89,13 @@ data = {
             "type": "nvideo"
         },
         {
-            "title": "Taekwondo",
-            "source": "https://www.youtube-nocookie.com/embed/Ms8uThjGMoI?si=uQdIAq9reD0dcIWU",
+            "title": "Kickboxing 🥊💪",
+            "source": "https://www.youtube.com/embed/E99m2TLGjTA?si=OXJYxV4yWCKXwWzT",
             "type": "nvideo"
         },
         {
-            "title": "Speech Therapy",
-            "source": "https://www.youtube-nocookie.com/embed/cqak0XTvrCQ?si=voNK-RiLtu2mWROm",
+            "title": "speaker_محاضر",
+            "source": "https://www.youtube.com/embed/LPMeia341_s",
             "type": "reel"
         },
         {
@@ -152,6 +152,16 @@ data = {
             "title": "Community",
             "source": "https://www.youtube-nocookie.com/embed/sGYcmFLPD88?si=yR6-OPshdtCrjffw",
             "type": "nvideo"
+        },
+        {
+            "title": "Podcast Reel",
+            "source": "https://www.youtube.com/embed/ImMGU_8jRXQ",
+            "type": "reel"
+        },
+        {
+            "title": "نوع اخر من مونتاج الريلز",
+            "source": "https://www.youtube.com/embed/M9WTTpMcuOo",
+            "type": "reel"
         },
     ]
 }
